@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- balises isolées -->
+    <xsd:element name="numero de securite social" type="xsd:integer"/>
+    <xsd:element name="nom" type="xsd:string"/>
+    <xsd:element name="date" type="xsd:date"/>
+   
+	
+
+	
+    <!--balise Creneau -->
+    <xsd:element name="Rdv">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="numero de securite social"/>
+                <xsd:element ref="nom"/>
+                <xsd:element ref="date"/>
+             
+            </xsd:sequence>
+        
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Schéma XML -->
+    <xsd:element name="Rdv">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Rdv" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

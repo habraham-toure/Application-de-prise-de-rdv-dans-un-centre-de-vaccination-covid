@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- balises isolées -->
+    <xsd:element name="nom" type="xsd:string"/>
+    <xsd:element name="prenom" type="xsd:string"/>
+    <xsd:element name="civil" type="xsd:string"/>
+    <xsd:element name="date de naissance" type="xsd:string"/>
+    <xsd:element name="numero de securite social" type="xsd:integer"/>
+	<xsd:element name="telephone" type="xsd:string"/>
+	<xsd:element name="numero d'adresse" type="xsd:string"/>
+	<xsd:element name="voie" type="xsd:string"/>
+	<xsd:element name="ville" type="xsd:string"/>
+    <xsd:element name="code postal" type="xsd:string"/>
+ 
+   
+	
+
+	
+    <!--balise Creneau -->
+    <xsd:element name="Utilisateur">
+        <xsd:complexType>
+            <xsd:sequence>
+            
+
+                 <xsd:element ref="nom" type="xsd:string"/>
+    <xsd:element ref="prenom" type="xsd:string"/>
+    <xsd:element ref="civil" type="xsd:string"/>
+    <xsd:element ref="date de naissance" type="xsd:string"/>
+    <xsd:element ref="numero de securite social" type="xsd:integer"/>
+	<xsd:element ref="telephone" type="xsd:string"/>
+	<xsd:element ref="numero d'adresse" type="xsd:string"/>
+	<xsd:element ref="voie" type="xsd:string"/>
+	<xsd:element ref="ville" type="xsd:string"/>
+    <xsd:element ref="code postal" type="xsd:string"/>
+             
+            </xsd:sequence>
+        
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Schéma XML -->
+    <xsd:element name="Utilisateur">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Utilisateur" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
